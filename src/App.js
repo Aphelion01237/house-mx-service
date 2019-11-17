@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import PrivateRoute from "./components/PrivateRoute";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
