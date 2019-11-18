@@ -4,16 +4,16 @@ import './Maintenance.css';
 import axios from 'axios';
 
 
-class CreateBook extends Component {
+class CreateEvent extends Component {
   constructor() {
     super();
     this.state = {
-      title: '',
-      isbn:'',
-      author:'',
-      description:'',
-      published_date:'',
-      publisher:''
+      name: '',
+      phoneNumber:'',
+      address:'',
+      urgency:'',
+      date:'',
+      description:''
     };
   }
 
@@ -25,57 +25,57 @@ class CreateBook extends Component {
     e.preventDefault();
 
     const data = {
-      title: this.state.title,
-      isbn: this.state.isbn,
-      author: this.state.author,
-      description: this.state.description,
-      published_date: this.state.published_date,
-      publisher: this.state.publisher
+      name: this.state.name,
+      phoneNumber: this.state.phoneNumber,
+      address: this.state.address,
+      urgency: this.state.urgency,
+      date: this.state.date,
+      description: this.state.description
     };
 
     axios
-      .post('http://localhost:3001/api/books', data)
+      .post('http://localhost:3001/api/events', data)
       .then(res => {
         this.setState({
-          title: '',
-          isbn:'',
-          author:'',
-          description:'',
-          published_date:'',
-          publisher:''
+          name: '',
+          phoneNumber:'',
+          address:'',
+          urgency:'',
+          date:'',
+          description:''
         })
         this.props.history.push('/maintenance/');
       })
       .catch(err => {
-        console.log("Error in CreateBook!");
+        console.log("Error in CreateEvent!");
       })
   };
 
   render() {
     return (
-      <div className="CreateBook">
+      <div className="CreateEvent">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <br />
               <Link to="/maintenance/" className="btn btn-outline-warning float-left">
-                  Show BooK List
+                  Show Requested Maintenance List
               </Link>
             </div>
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Add Book</h1>
+              <h1 className="display-4 text-center">Add Maintenance Request</h1>
               <p className="lead text-center">
-                  Create new book
+                  Create new maintenance request
               </p>
 
               <form noValidate onSubmit={this.onSubmit}>
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Title of the Book'
-                    name='title'
+                    placeholder='Name'
+                    name='name'
                     className='form-control'
-                    value={this.state.title}
+                    value={this.state.name}
                     onChange={this.onChange}
                   />
                 </div>
@@ -84,10 +84,10 @@ class CreateBook extends Component {
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='ISBN'
-                    name='isbn'
+                    placeholder='Contact Number'
+                    name='phoneNumber'
                     className='form-control'
-                    value={this.state.isbn}
+                    value={this.state.phoneNumber}
                     onChange={this.onChange}
                   />
                 </div>
@@ -95,10 +95,10 @@ class CreateBook extends Component {
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Author'
-                    name='author'
+                    placeholder='Address'
+                    name='address'
                     className='form-control'
-                    value={this.state.author}
+                    value={this.state.address}
                     onChange={this.onChange}
                   />
                 </div>
@@ -106,10 +106,10 @@ class CreateBook extends Component {
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Describe this book'
-                    name='description'
+                    placeholder='How urgent is this issue?'
+                    name='urgency'
                     className='form-control'
-                    value={this.state.description}
+                    value={this.state.urgency}
                     onChange={this.onChange}
                   />
                 </div>
@@ -117,20 +117,20 @@ class CreateBook extends Component {
                 <div className='form-group'>
                   <input
                     type='date'
-                    placeholder='published_date'
-                    name='published_date'
+                    placeholder='When did this happen?'
+                    name='date'
                     className='form-control'
-                    value={this.state.published_date}
+                    value={this.state.date}
                     onChange={this.onChange}
                   />
                 </div>
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Publisher of this Book'
-                    name='publisher'
+                    placeholder='Description of the problem.'
+                    name='description'
                     className='form-control'
-                    value={this.state.publisher}
+                    value={this.state.description}
                     onChange={this.onChange}
                   />
                 </div>
@@ -148,4 +148,4 @@ class CreateBook extends Component {
   }
 }
 
-export default CreateBook;
+export default CreateEvent;

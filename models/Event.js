@@ -1,27 +1,27 @@
-// models/Book.js
+// models/Event.js
 
 const mongoose = require('mongoose');
 
-const BookSchema = new mongoose.Schema({
-  title: {
+const EventSchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true
   },
-  isbn: {
+  phoneNumber: {
     type: String,
     required: true
   },
-  author: {
+  address: {
     type: String,
     required: true
   },
-  description: {
+  urgency: {
     type: String
   },
-  published_date: {
+  date: {
     type: Date
   },
-  publisher: {
+  description: {
     type: String
   },
   updated_date: {
@@ -30,4 +30,4 @@ const BookSchema = new mongoose.Schema({
   }
 });
 
-module.exports = Book = mongoose.model('book', BookSchema);
+module.exports = Event = mongoose.model('event', EventSchema);

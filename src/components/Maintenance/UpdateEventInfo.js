@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Maintenance.css';
 
-class UpdateBookInfo extends Component {
+class UpdateEventInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,9 +19,9 @@ class UpdateBookInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:3001/api/books/'+this.props.match.params.id)
+      .get('http://localhost:3001/api/events/'+this.props.match.params.id)
       .then(res => {
-        // this.setState({...this.state, book: res.data})
+        // this.setState({...this.state, event: res.data})
         this.setState({
           title: res.data.title,
           isbn: res.data.isbn,
@@ -32,7 +32,7 @@ class UpdateBookInfo extends Component {
         })
       })
       .catch(err => {
-        console.log("Error from UpdateBookInfo");
+        console.log("Error from UpdateEventInfo");
       })
   };
 
@@ -53,31 +53,31 @@ class UpdateBookInfo extends Component {
     };
 
     axios
-      .put('http://localhost:3001/api/books/'+this.props.match.params.id, data)
+      .put('http://localhost:3001/api/events/'+this.props.match.params.id, data)
       .then(res => {
-        this.props.history.push('/show-book/'+this.props.match.params.id);
+        this.props.history.push('/maintenance/show-event/'+this.props.match.params.id);
       })
       .catch(err => {
-        console.log("Error in UpdateBookInfo!");
+        console.log("Error in UpdateEventInfo!");
       })
   };
 
 
   render() {
     return (
-      <div className="UpdateBookInfo">
+      <div className="UpdateEventInfo">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <br />
-              <Link to="/" className="btn btn-outline-warning float-left">
-                  Show BooK List
+              <Link to="/maintenance/" className="btn btn-outline-warning float-left">
+                  Show Event List
               </Link>
             </div>
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Edit Book</h1>
+              <h1 className="display-4 text-center">Edit Event</h1>
               <p className="lead text-center">
-                  Update Book's Info
+                  Update Event Info
               </p>
             </div>
           </div>
@@ -85,78 +85,78 @@ class UpdateBookInfo extends Component {
           <div className="col-md-8 m-auto">
           <form noValidate onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Name</label>
               <input
-                type='text'
-                placeholder='Title of the Book'
-                name='title'
-                className='form-control'
-                value={this.state.title}
-                onChange={this.onChange}
+                    type='text'
+                    placeholder='Name'
+                    name='name'
+                    className='form-control'
+                    value={this.state.name}
+                    onChange={this.onChange}
               />
             </div>
             <br />
 
             <div className='form-group'>
-            <label htmlFor="isbn">ISBN</label>
+            <label htmlFor="isbn">Phone Number</label>
               <input
-                type='text'
-                placeholder='ISBN'
-                name='isbn'
-                className='form-control'
-                value={this.state.isbn}
-                onChange={this.onChange}
+                    type='text'
+                    placeholder='Contact Number'
+                    name='phoneNumber'
+                    className='form-control'
+                    value={this.state.phoneNumber}
+                    onChange={this.onChange}
               />
             </div>
 
             <div className='form-group'>
-            <label htmlFor="author">Author</label>
+            <label htmlFor="author">Address</label>
               <input
-                type='text'
-                placeholder='Author'
-                name='author'
-                className='form-control'
-                value={this.state.author}
-                onChange={this.onChange}
+                    type='text'
+                    placeholder='Address'
+                    name='address'
+                    className='form-control'
+                    value={this.state.address}
+                    onChange={this.onChange}
               />
             </div>
 
             <div className='form-group'>
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">Urgency</label>
               <input
-                type='text'
-                placeholder='Describe this book'
-                name='description'
-                className='form-control'
-                value={this.state.description}
-                onChange={this.onChange}
+                    type='text'
+                    placeholder='How urgent is this issue?'
+                    name='urgency'
+                    className='form-control'
+                    value={this.state.urgency}
+                    onChange={this.onChange}
               />
             </div>
 
             <div className='form-group'>
-            <label htmlFor="published_date">Published Date</label>
+            <label htmlFor="published_date">Date of Incident</label>
               <input
-                type='date'
-                placeholder='published_date'
-                name='published_date'
-                className='form-control'
-                value={this.state.published_date}
-                onChange={this.onChange}
+                    type='date'
+                    placeholder='When did this happen?'
+                    name='date'
+                    className='form-control'
+                    value={this.state.date}
+                    onChange={this.onChange}
               />
             </div>
             <div className='form-group'>
-            <label htmlFor="publisher">Publisher</label>
+            <label htmlFor="publisher">Incident Description</label>
               <input
-                type='text'
-                placeholder='Publisher of this Book'
-                name='publisher'
-                className='form-control'
-                value={this.state.publisher}
-                onChange={this.onChange}
+                    type='text'
+                    placeholder='Description of the problem.'
+                    name='description'
+                    className='form-control'
+                    value={this.state.description}
+                    onChange={this.onChange}
               />
             </div>
 
-            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Update Book</button>
+            <button type="submit" className="btn btn-outline-info btn-lg btn-block">Update Maintenance Request</button>
             </form>
           </div>
 
@@ -166,4 +166,4 @@ class UpdateBookInfo extends Component {
   }
 }
 
-export default UpdateBookInfo;
+export default UpdateEventInfo;
