@@ -63,8 +63,7 @@ const About = () => {
                             <Card.Body>
                                 <Card.Title>Nico Louis-Kayen</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    My name is Nico and I was born and raised in Oakland, CA. Send me a message on Linked-In or Github!
                                     </Card.Text>
                                     <Button variant="primary">Linked-In</Button>&nbsp;<Button variant="primary">Github</Button>
                             </Card.Body>
