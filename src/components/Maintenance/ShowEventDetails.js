@@ -14,7 +14,7 @@ class showEventDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:3001/api/events/'+this.props.match.params.id)
+      .get('https://dry-sands-15245.herokuapp.com/api/events/'+this.props.match.params.id)
       .then(res => {
         // console.log("Print-showEventDetails-API-response: " + res.data);
         this.setState({
@@ -28,7 +28,7 @@ class showEventDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('http://localhost:3001/api/events/'+id)
+      .delete('https://dry-sands-15245.herokuapp.com/api/events/'+id)
       .then(res => {
         this.props.history.push("/maintenance/");
       })

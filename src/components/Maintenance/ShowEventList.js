@@ -14,7 +14,7 @@ class ShowEventList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3001/api/events')
+      .get('https://dry-sands-15245.herokuapp.com/api/events')
       .then(res => {
         this.setState({
           events: res.data
