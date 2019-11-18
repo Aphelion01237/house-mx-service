@@ -19,10 +19,12 @@ const EventSchema = new mongoose.Schema({
     type: String
   },
   date: {
-    type: Date
+    type: Date,
+    required: true
   },
   description: {
-    type: String
+    type: String,
+    required: true
   },
   updated_date: {
     type: Date,
