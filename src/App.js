@@ -9,12 +9,11 @@ import Payment from "./components/Payment"
 import PrivateRoute from "./components/PrivateRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
     <body>
-    <div className="App">
-      {/* New - use BrowserRouter to provide access to /profile */}
       <BrowserRouter>
         <header>
           <NavBar />
@@ -25,8 +24,11 @@ function App() {
           <PrivateRoute path="/payment" component={Payment} />
         </Switch>
       </BrowserRouter>
-    </div>
-    <IntroJumbo />
+      <Container style={{ height: '100vh' }}>
+        <div className="App">
+          <IntroJumbo />
+        </div>
+      </Container>
     </body>
   );
 }

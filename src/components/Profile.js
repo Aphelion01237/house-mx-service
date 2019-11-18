@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
+import Container from 'react-bootstrap/Container'
 
 const Profile = () => {
   const { loading, user } = useAuth0();
@@ -11,6 +12,7 @@ const Profile = () => {
   }
 
   return (
+      <Container>
     <Fragment>
       <img src={user.picture} alt="Profile" />
 
@@ -18,6 +20,7 @@ const Profile = () => {
       <p>{user.email}</p>
       <code>{JSON.stringify(user, null, 2)}</code>
     </Fragment>
+    </Container>
   );
 };
 

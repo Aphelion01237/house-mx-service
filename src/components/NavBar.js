@@ -14,29 +14,29 @@ const NavBar = () => {
 
   if (loading || !user) {
     return (
-      <Container>
-        <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark">
+        <Container>
           <Navbar.Brand>EasyHouse</Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             {/* <Navbar.Text>
               {!isAuthenticated && (<Button onClick={() => loginWithRedirect({})}>Log in</Button>)}
             </Navbar.Text> */}
           </Navbar.Collapse>
-        </Navbar>
-      </Container>
+        </Container>
+      </Navbar>
     );
   }
 
 
 
   return (
-    <Container>
-      <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark">
+      <Container>
         <Navbar.Brand>EasyHouse</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link> {isAuthenticated && (<span><Link to="/">Home</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/profile">Profile</Link></span>)} </Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link> {isAuthenticated && (<span><Link to="/payment">Billing</Link></span>)} </Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
@@ -46,8 +46,8 @@ const NavBar = () => {
             {isAuthenticated && <Button onClick={() => logout()}>Log out</Button>}
           </Navbar.Text>
         </Navbar.Collapse>
-      </Navbar>
-    </Container>
+      </Container>
+    </Navbar>
   );
 };
 
