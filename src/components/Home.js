@@ -9,7 +9,7 @@ import living from './images/living.jpg'
 import outside from './images/outside.jpg'
 
 
-const IntroJumbo = () => {
+const Home = () => {
     const { loading, isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
     if (loading || !user) {
@@ -73,4 +73,4 @@ const IntroJumbo = () => {
 
 }
 
-export default IntroJumbo;
+export default Home;

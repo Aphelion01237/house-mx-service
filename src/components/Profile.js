@@ -42,7 +42,7 @@ const Profile = () => {
                 </tbody>
             </Table>
 
-            {/* <Services /> */}
+            <Services />
         </Container>
     );
 };

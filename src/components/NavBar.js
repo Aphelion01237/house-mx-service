@@ -14,13 +14,13 @@ const NavBar = () => {
 
   if (loading || !user) {
     return (
-      <Navbar bg="dark" variant="dark">
+      <Navbar fixed="top" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>EasyHouse</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link><Link to="/home">Home</Link></Nav.Link>
+          </Nav>
           <Navbar.Collapse className="justify-content-end">
-            {/* <Navbar.Text>
-              {!isAuthenticated && (<Button onClick={() => loginWithRedirect({})}>Log in</Button>)}
-            </Navbar.Text> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -30,17 +30,17 @@ const NavBar = () => {
 
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar fixed="top" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>EasyHouse</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link> {isAuthenticated && (<span><Link to="/">Home</Link></span>)} </Nav.Link>
+          <Nav.Link> {isAuthenticated && (<span><Link to="/home">Home</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/profile">Profile</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/payment">Billing</Link></span>)} </Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            {isAuthenticated && (<span>Signed in as: {user.name}&nbsp;</span>)}
+            {isAuthenticated && (<span>Signed in as: <br></br> {user.name}&nbsp;</span>)}
           </Navbar.Text>
           <Navbar.Text>
             {isAuthenticated && <Button onClick={() => logout()}>Log out</Button>}
