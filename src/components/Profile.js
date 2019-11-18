@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table'
+import Services from "./Services"
 
 const Profile = () => {
   const { loading, user } = useAuth0();
@@ -39,6 +40,8 @@ const Profile = () => {
     
   </tbody>
 </Table>
+
+<Services/>
 </Container>
       <code>{JSON.stringify(user, null, 2)}</code>
     </Fragment>
