@@ -34,7 +34,7 @@ class CreateEvent extends Component {
     };
 
     axios
-      .post('https://dry-sands-15245.herokuapp.com/api/events', data)
+      .post('http://localhost:3001', data)
       .then(res => {
         this.setState({
           name: '',

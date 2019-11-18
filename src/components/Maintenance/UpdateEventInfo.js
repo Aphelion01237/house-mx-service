@@ -19,7 +19,7 @@ class UpdateEventInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('https://dry-sands-15245.herokuapp.com/api/events/'+this.props.match.params.id)
+      .get('http://localhost:3001/'+this.props.match.params.id)
       .then(res => {
         // this.setState({...this.state, event: res.data})
         this.setState({
@@ -53,7 +53,7 @@ class UpdateEventInfo extends Component {
     };
 
     axios
-      .put('https://dry-sands-15245.herokuapp.com/api/events/'+this.props.match.params.id, data)
+      .put('http://localhost:3001/'+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/maintenance/show-event/'+this.props.match.params.id);
       })
