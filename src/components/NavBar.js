@@ -18,7 +18,7 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand>EasyHouse</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link><Link to="/home">Home</Link></Nav.Link>
+            <Nav.Link><Link to="/">Home</Link></Nav.Link>
           </Nav>
           <Navbar.Collapse className="justify-content-end">
           </Navbar.Collapse>
@@ -34,7 +34,7 @@ const NavBar = () => {
       <Container>
         <Navbar.Brand>EasyHouse</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link> {isAuthenticated && (<span><Link to="/home">Home</Link></span>)} </Nav.Link>
+          <Nav.Link> {isAuthenticated && (<span><Link to="/">Home</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/profile">Profile</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/maintenance">Maintenance</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/payment">Billing</Link></span>)} </Nav.Link>
