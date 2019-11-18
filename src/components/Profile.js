@@ -32,11 +32,15 @@ const Profile = () => {
                 </thead>
                 <tbody>
                     <tr>
-
                         <td>Lawn Trim</td>
-
-
                     </tr>
+                    <tr>
+                        <td>Car Wash</td>
+                    </tr>
+                    <tr>
+                        <td>Gutter Cleaning</td>
+                    </tr>
+
 
 
                 </tbody>
