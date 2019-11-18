@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import IntroJumbo from './components/IntroLoggedOut'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
+import DisplayResults from "./components/DisplayResults";
 import Payment from "./components/Payment"
 import PrivateRoute from "./components/PrivateRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
