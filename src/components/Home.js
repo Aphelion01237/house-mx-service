@@ -18,10 +18,9 @@ const Home = () => {
         return (
             <div>
                 <Jumbotron>
-                    <h1>Hello, world!</h1>
+                    <h1>Welcome to EasyHome!</h1>
                     <p>
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
+                        EasyHome is a subscription service that takes care of scheduling outdoor home maintenance, and even has a 24h emergency maintenance request form! Just let us know, and we'll get it taken care of.
                     </p>
                     <p>
                         {!isAuthenticated && (<Button onClick={() => loginWithRedirect({})}>Get started or Sign in</Button>)}

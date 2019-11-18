@@ -26,7 +26,13 @@ ReactDOM.render(
     client_id={config.clientId}
     redirect_uri={'https://dry-sands-15245.herokuapp.com'}
     onRedirectCallback={onRedirectCallback}
-    // 'http://localhost:3000' || 
+
+// ReactDOM.render(
+//   <Auth0Provider
+//     domain={config.domain}
+//     client_id={config.clientId}
+//     redirect_uri={'http://localhost:3000'}
+//     onRedirectCallback={onRedirectCallback}
 >
     <App />
   </Auth0Provider>,
