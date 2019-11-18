@@ -6,6 +6,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import kitchen from './images/kitchen.jpg'
 import living from './images/living.jpg'
 import outside from './images/outside.jpg'
+import homebuyers from './images/homebuyers.jpg'
+import roofing from './images/roofing.jpg'
+import words from './images/words.jpeg'
 
 const Home = () => {
     const { loading, isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
