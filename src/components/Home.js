@@ -1,7 +1,6 @@
 import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Carousel from 'react-bootstrap/Carousel'
 import kitchen from './images/kitchen.jpg'
@@ -33,20 +32,24 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <div style={{ textShadow: '2px 2px #000000' }}>
+                                <h3>Enjoy Peace of Mind</h3>
+                                <p>Why make life more stressful? Let us take care of your home maintenance.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
                             src={living}
-                            alt="Third slide"
+                            alt="Second slide"
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div style={{ textShadow: '2px 2px #000000' }}>
+                                <h3>Quick and Easy to use</h3>
+                                <p>Simply log in, provide your information, and let us handle the rest.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -57,12 +60,14 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <div style={{ textShadow: '2px 2px #000000' }}>
+                                <h3>The Grass Here is too Long</h3>
+                                <p>If these people used our service, their lawn would be trimmed.</p>
+                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                </div>
+            </div>
         );
     }
 

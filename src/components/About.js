@@ -16,7 +16,7 @@ const About = () => {
                 <Row>
                     <Col>
                     <Card style={{ margin: 'auto', width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="https://picsum.photos/id/1025/100" />
                             <Card.Body>
                                 <Card.Title>Derek Paterson</Card.Title>
                                 <Card.Text>
@@ -29,7 +29,7 @@ const About = () => {
                     </Col>
                     <Col>
                         <Card style={{ margin: 'auto', width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="https://picsum.photos/id/1024/100" />
                             <Card.Body>
                                 <Card.Title>Cerek Moreno</Card.Title>
                                 <Card.Text>
@@ -46,7 +46,7 @@ const About = () => {
                 <Row>
                     <Col>
                     <Card style={{ margin: 'auto', width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="https://picsum.photos/id/200/100" />
                             <Card.Body>
                                 <Card.Title>Daniel Quintero</Card.Title>
                                 <Card.Text>
@@ -59,7 +59,7 @@ const About = () => {
                     </Col>
                     <Col>
                     <Card style={{ margin: 'auto', width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="https://picsum.photos/id/237/100" />
                             <Card.Body>
                                 <Card.Title>Nico Louis-Kayen</Card.Title>
                                 <Card.Text>

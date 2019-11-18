@@ -1,9 +1,6 @@
 import React from "react";
 import { Link, BrowserRouter, Route, Switch  } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
-import About from './About';
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 
 
 const Footer = () => {
