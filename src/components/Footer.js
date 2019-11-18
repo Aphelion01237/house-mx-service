@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
             <footer>
-                <Navbar fixed="bottom" bg="dark" variant="dark">
+                <Navbar fixed="bottom" bg="dark" variant="dark" style={{height: '5vh'}}>
                     <Navbar.Brand><Link to="/about">About</Link></Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar>

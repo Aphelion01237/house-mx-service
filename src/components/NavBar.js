@@ -14,7 +14,7 @@ const NavBar = () => {
 
   if (loading || !user) {
     return (
-      <Navbar fixed="top" bg="dark" variant="dark">
+      <Navbar fixed="top" bg="dark" variant="dark" style={{height: '5vh'}}>
         <Container>
           <Navbar.Brand>EasyHouse</Navbar.Brand>
           <Nav className="mr-auto">
@@ -30,12 +30,13 @@ const NavBar = () => {
 
 
   return (
-    <Navbar fixed="top" bg="dark" variant="dark">
+    <Navbar fixed="top" bg="dark" variant="dark" style={{height: '5vh'}}>
       <Container>
         <Navbar.Brand>EasyHouse</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link> {isAuthenticated && (<span><Link to="/home">Home</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/profile">Profile</Link></span>)} </Nav.Link>
+          <Nav.Link> {isAuthenticated && (<span><Link to="/maintenance">Maintenance</Link></span>)} </Nav.Link>
           <Nav.Link> {isAuthenticated && (<span><Link to="/payment">Billing</Link></span>)} </Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end">

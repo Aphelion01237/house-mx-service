@@ -7,7 +7,6 @@ import kitchen from './images/kitchen.jpg'
 import living from './images/living.jpg'
 import outside from './images/outside.jpg'
 
-
 const Home = () => {
     const { loading, isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
