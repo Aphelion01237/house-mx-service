@@ -76,42 +76,48 @@ const Home = () => {
 
     return (
         <div><Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={words}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>A Team For Everything</h3>
-            <p>We have specialized workers who are highly skilled in their fields. Select a service and we will send out the appropriate crew. </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={roofing}
-            alt="Third slide"
-          />
-      
-          <Carousel.Caption>
-            <h3>Quick and Efficient</h3>
-            <p>We always try to give a reasonable estimate on how long a job will take us. We pride ourselves on our focus and ability to stay on our work schedule.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={homebuyers}
-            alt="Third slide"
-          />
-      
-          <Carousel.Caption>
-            <h3>Home of your Dreams!</h3>
-            <p>Let us help you create your dream home!. Work with someone from our team of skilled remodelers to plan your own home,</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel></div>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={words}
+                    alt="First slide"
+                />
+                <Carousel.Caption>
+                    <div style={{ textShadow: '2px 2px #000000' }}>
+                        <h3>A Team For Everything</h3>
+                        <p>We have specialized workers who are highly skilled in their fields. Select a service and we will send out the appropriate crew. </p>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={roofing}
+                    alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                    <div style={{ textShadow: '2px 2px #000000' }}>
+                        <h3>Quick and Efficient</h3>
+                        <p>We always try to give a reasonable estimate on how long a job will take us. We pride ourselves on our focus and ability to stay on our work schedule.</p>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={homebuyers}
+                    alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                    <div style={{ textShadow: '2px 2px #000000' }}>
+                        <h3>Home of your Dreams!</h3>
+                        <p>Let us help you create your dream home!. Work with someone from our team of skilled remodelers to plan your own home,</p>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel></div>
     )
 
 
