@@ -18,9 +18,9 @@ const NavBar = () => {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>EasyHouse</Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
+            {/* <Navbar.Text>
               {!isAuthenticated && (<Button onClick={() => loginWithRedirect({})}>Log in</Button>)}
-            </Navbar.Text>
+            </Navbar.Text> */}
           </Navbar.Collapse>
         </Navbar>
       </Container>
