@@ -23,7 +23,7 @@ const About = () => {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                                     </Card.Text>
-                                <Button href="https://www.linkedin.com/in/derek-paterson-6132b682/" variant="primary">Linked-In</Button>&nbsp;<Button href="https://github.com/Aphelion01237" variant="primary">Github</Button>
+                                <Button href="https://www.linkedin.com/in/derek-paterson-6132b682/" target="_blank" variant="primary">Linked-In</Button>&nbsp;<Button href="https://github.com/Aphelion01237" target="_blank" variant="primary">Github</Button>
                             </Card.Body>
                         </Card>
                     </Col>
