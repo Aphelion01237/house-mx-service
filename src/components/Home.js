@@ -75,7 +75,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://comps.gograph.com/house-set-with-work-tools_gg97602060.jpg"
+            src={words}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -86,7 +86,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://remodelerplatform.blob.core.windows.net/wwwxl-contractingcom/gallery/original/30d1c440-662c-4412-8eb8-1a43d49e8eb8.jpg"
+            src={roofing}
             alt="Third slide"
           />
       
@@ -98,7 +98,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://www.weslingelectric.com/wp-content/uploads/2014/09/Happy-Family-getting-electric-work-done.jpg"
+            src={homebuyers}
             alt="Third slide"
           />
       
