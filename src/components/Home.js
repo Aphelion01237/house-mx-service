@@ -71,7 +71,43 @@ const Home = () => {
     }
 
     return (
-        <div></div>
+        <div><Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://comps.gograph.com/house-set-with-work-tools_gg97602060.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>A Team For Everything</h3>
+            <p>We have specialized workers who are highly skilled in their fields. Select a service and we will send out the appropriate crew. </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://remodelerplatform.blob.core.windows.net/wwwxl-contractingcom/gallery/original/30d1c440-662c-4412-8eb8-1a43d49e8eb8.jpg"
+            alt="Third slide"
+          />
+      
+          <Carousel.Caption>
+            <h3>Quick and Efficient</h3>
+            <p>We always try to give a reasonable estimate on how long a job will take us. We pride ourselves on our focus and ability to stay on our work schedule.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.weslingelectric.com/wp-content/uploads/2014/09/Happy-Family-getting-electric-work-done.jpg"
+            alt="Third slide"
+          />
+      
+          <Carousel.Caption>
+            <h3>Home of your Dreams!</h3>
+            <p>Let us help you create your dream home!. Work with someone from our team of skilled remodelers to plan your own home,</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel></div>
     )
 
 
