@@ -2,55 +2,55 @@ import React, { Component } from 'react';
 import './Maintenance.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
+import EventCard from './EventCard';
 
-class ShowBookList extends Component {
+class ShowEventList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      events: []
     };
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:3001/api/books')
+      .get('http://localhost:3001/api/events')
       .then(res => {
         this.setState({
-          books: res.data
+          events: res.data
         })
       })
       .catch(err =>{
-        console.log('Error from ShowBookList');
+        console.log('Error from ShowEventList');
       })
   };
 
 
   render() {
-    const books = this.state.books;
-    console.log("PrintBook: " + books);
-    let bookList;
+    const events = this.state.events;
+    console.log("PrintEvent: " + events);
+    let eventList;
 
-    if(!books) {
-      bookList = "there is no book record!";
+    if(!events) {
+      eventList = "there is no event record!";
     } else {
-      bookList = books.map((book, k) =>
-        <BookCard book={book} key={k} />
+      eventList = events.map((event, k) =>
+        <EventCard event={event} key={k} />
       );
     }
 
     return (
-      <div className="ShowBookList">
+      <div className="ShowEventList">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <br />
-              <h2 className="display-4 text-center">Books List</h2>
+              <h2 className="display-4 text-center">Events List</h2>
             </div>
 
             <div className="col-md-11">
-              <Link to="/maintenance/create-book" className="btn btn-outline-warning float-right">
-                + Add New Book
+              <Link to="/maintenance/create-event" className="btn btn-outline-warning float-right">
+                + Add New Event
               </Link>
               <br />
               <br />
@@ -60,7 +60,7 @@ class ShowBookList extends Component {
           </div>
 
           <div className="list">
-                {bookList}
+                {eventList}
           </div>
         </div>
       </div>
@@ -68,4 +68,4 @@ class ShowBookList extends Component {
   }
 }
 
-export default ShowBookList;
+export default ShowEventList;

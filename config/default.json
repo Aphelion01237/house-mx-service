@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb+srv://easyHouse:easyHouse2019@test-maintenance-9tvze.mongodb.net/test?retryWrites=true&w=majority"
+  }

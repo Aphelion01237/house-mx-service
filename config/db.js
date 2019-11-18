@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const config = require('config');
+const db = config.get('mongoURI');
 
 const connectDB = async () => {
   try {
     await mongoose.connect(
-    process.env.MONGODB_URI || "mongodb+srv://easyHouse:easyHouse2019@test-maintenance-9tvze.mongodb.net/test?retryWrites=true&w=majority",
+      db,
       {
-        useCreateIndex: true,
         useNewUrlparser: true
       }
     );
